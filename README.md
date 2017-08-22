@@ -1,4 +1,4 @@
-# Srcoder\Normalize library
+# Srcoder\Normalize strings library
 
 Use to normalize strings. Implements most basic conversions.
 Find a new one, please create a PR :)

@@ -1,5 +1,5 @@
 {
-  "name": "srcoder/normalize",
+  "name": "srcoder/normalize-strings",
   "description": "Re-usable way of normalizing strings",
   "type": "library",
   "license": "MIT",
