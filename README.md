@@ -3,6 +3,10 @@
 Use to normalize strings. Implements most basic conversions.
 Find a new one, please create a PR :)
 
+## Dependencies
+
+Requires minimum PHP 7.0+
+
 ## Rules
 
 * `Srcoder\Normalize\Rule\Append(string $append)`
