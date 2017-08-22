@@ -1,0 +1,13 @@
+{
+    "name": "srcoder/normalize",
+    "description": "Re-usable way of normalizing strings",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen Boersma",
+            "email": "jeroen@srcode.nl"
+        }
+    ],
+    "require": {}
+}
