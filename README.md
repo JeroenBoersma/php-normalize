@@ -1,20 +1,16 @@
 # Srcoder\Normalize strings library
-
 Use to normalize strings. Implements most basic conversions.
-Find a new one, please create a PR :)
+Find a new one, please create a PR :-)
 
 ## Dependencies
-
 Requires minimum PHP 7.0+
 
 ## Installation
-
 ```bash
 composer require srcoder/normalize-strings
 ```
 
 ## Rules
-
 * `Srcoder\Normalize\Rule\Append(string $append)`
 * `Srcoder\Normalize\Rule\Prepend(string $prepend)`
 * `Srcoder\Normalize\Rule\Lowercase`
@@ -25,8 +21,11 @@ composer require srcoder/normalize-strings
 * `Srcoder\Normalize\Rule\RegExp(string $pattern, string $replacement)`
 * `Srcoder\Normalize\Rule\Callback(\Closure $closure)`
 
-## Basic usage
+## Caching
+Normalized strings are cached internally,
+second lookup for the same string will be returned from cache. 
 
+## Basic usage
 This is basic usage of the normlizer.
 
 ```php
@@ -47,7 +46,6 @@ echo $normalizer->normalize('Hello');
 ```
 
 ## Chaining
-
 You can chain normalizer, if it only adds a simple thingy.
 
 ```php
@@ -68,7 +66,6 @@ echo $newNormalizer->normalize('Hello');
 ```
 
 ## Manager (instance)
-
 If you need your normalizers to be available everywhere.
 
 ```php
