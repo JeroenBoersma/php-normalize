@@ -118,3 +118,30 @@ echo Srcoder\Normalize\Manager::instance()
         ->normalize('HelloWorld');
 // "hello_world"
 ```
+
+## Trait
+To use the normalizer in any of your classes you can use the trait.
+
+```php
+class MyAwesomeClass
+{
+    use \Srcoder\Normalize\NormalizeTrait;
+    
+    public function __construct()
+    {
+        $this->normalizerInit();
+        
+        $this->addNormalizeRules(
+                [
+                    new Srcoder\Normalize\Rule\Trim('Ho'),
+                    new Srcoder\Normalize\Rule\Uppercase,
+                ]
+        );
+    }
+}
+
+$myAwesome = new MyAwesomeClass;
+
+echo $myAwesome->normalize('Hello');
+// "ELL"
+```
