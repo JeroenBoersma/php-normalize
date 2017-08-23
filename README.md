@@ -169,3 +169,5 @@ $myAwesome = new MyAwesomeClass;
 echo $myAwesome->normalize('Hello');
 // "ELL"
 ```
+## Tests
+All code is covered by tests, if you want to create a PR please run these tests too.
