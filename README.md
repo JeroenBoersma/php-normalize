@@ -52,7 +52,7 @@ You can chain normalizer, if it only adds a simple thingy.
 // ... continue
 
 $newNormalizer = new Srcoder\Normalize\Normalize([
-    new Rule\Prepend('Good')
+    new Srcoder\Normalize\Rule\Prepend('Good')
 ]);
 
 echo $newNormalizer->normalize('Hello');
@@ -64,6 +64,24 @@ $newNormalizer->setChain($normalizer);
 echo $newNormalizer->normalize('Hello');
 // "GoodBye World!"
 ```
+
+## Add-/prepend-Rule
+You can add or prepend rules to a normalizer.
+
+```php
+// ... continue
+
+$newNormalizer->prependRule(new Srcoder\Normalize\RegExp('#[A-Z]+#', '+'));
+
+echo $newNormalizer->normalize('Hello');
+// "GoodBye+ELLO World!"
+```
+
+## Multiple rules at once
+Just as in the constructor you can add multiple rules.
+
+* `addRules([Rule, Rule])`
+* `prependRules([Rule, Rule])`
 
 ## Manager (instance)
 If you need your normalizers to be available everywhere.
