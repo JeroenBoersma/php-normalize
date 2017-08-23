@@ -83,6 +83,30 @@ Just as in the constructor you can add multiple rules.
 * `addRules([Rule, Rule])`
 * `prependRules([Rule, Rule])`
 
+## Adding your own rules
+
+Just implement the `Sroder\Normalize\Rule\RuleInterface`
+
+```php
+class sha1Rule implements Sroder\Normalize\Rule\RuleInterface
+{
+    
+    public function apply(string $string) : string
+    {
+        return sha1($strings);    
+    }
+
+}
+
+$myNormalizer = new Sroder\Normalize([
+    new sha1Rule
+]);
+
+echo $myNormalizer->normalize('test');
+// "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3"
+```
+
+
 ## Manager (instance)
 If you need your normalizers to be available everywhere.
 
