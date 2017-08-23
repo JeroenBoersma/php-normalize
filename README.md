@@ -7,6 +7,12 @@ Find a new one, please create a PR :)
 
 Requires minimum PHP 7.0+
 
+## Installation
+
+```bash
+composer require srcoder/normalize-strings
+```
+
 ## Rules
 
 * `Srcoder\Normalize\Rule\Append(string $append)`
