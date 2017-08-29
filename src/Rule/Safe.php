@@ -28,7 +28,8 @@ class Safe implements RuleInterface
      */
     public function apply(string $string) : string
     {
-        while (($result = $this->rule->apply($string)) != $string && ($limit === -1 || $limit-- > -1)) {
+        $limit = $this->limit;
+        while (($result = $this->rule->apply($string)) != $string && ($limit === -1 || --$limit > -1)) {
             $string = $result;
         }
 
