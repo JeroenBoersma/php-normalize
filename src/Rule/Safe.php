@@ -29,7 +29,7 @@ class Safe implements RuleInterface
     public function apply(string $string) : string
     {
         $limit = $this->limit;
-        while (($result = $this->rule->apply($string)) != $string && ($limit === -1 || --$limit > -1)) {
+        while (($result = $this->rule->apply($string)) != $string && ($limit === -1 || --$limit > 0)) {
             $string = $result;
         }
 

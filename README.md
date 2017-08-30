@@ -20,6 +20,7 @@ composer require srcoder/normalize-strings
 * `Srcoder\Normalize\Rule\Words(string $delimiters)`
 * `Srcoder\Normalize\Rule\RegExp(string $pattern, string $replacement)`
 * `Srcoder\Normalize\Rule\Callback(\Closure $closure)`
+* `Srcoder\Normalize\Rule\Safe(RuleInterface $rule, int $limit = -1)`
 
 ## Caching
 Normalized strings are cached internally,
